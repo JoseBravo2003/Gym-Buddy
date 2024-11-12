@@ -316,6 +316,69 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'View All Workouts',
     },
   },
+  // Perfil
+  {
+    'rktkr0qr': {
+      'es': 'Perfil',
+      'en': '',
+    },
+    'd7ivydiz': {
+      'es': 'Maria Arias',
+      'en': '',
+    },
+    '4eokw301': {
+      'es': 'Editar perfil',
+      'en': '',
+    },
+    '7d1d2cr1': {
+      'es': 'Informacion Personal',
+      'en': '',
+    },
+    'vf53zgtj': {
+      'es': 'Correo',
+      'en': '',
+    },
+    'xcunfq9n': {
+      'es': 'maria.arias@email.com',
+      'en': '',
+    },
+    'z3ewl9nl': {
+      'es': 'Peso',
+      'en': '',
+    },
+    'cuelss07': {
+      'es': '75 kg',
+      'en': '',
+    },
+    '3ws9tmhv': {
+      'es': 'Altura',
+      'en': '',
+    },
+    '6yy1574i': {
+      'es': '180 cm',
+      'en': '',
+    },
+    'zvnwqtkn': {
+      'es': 'Genero',
+      'en': '',
+    },
+    'j6ozhlka': {
+      'es': 'Mujer',
+      'en': '',
+    },
+    'a1ntavh8': {
+      'es': 'Edad',
+      'en': '',
+    },
+    '1adv7c5z': {
+      'es': '28',
+      'en': '',
+    },
+    'w2xq1pbm': {
+      'es': 'Cerra sesión',
+      'en': '',
+    },
+  },
   // Miscellaneous
   {
     'osjbj17r': {
