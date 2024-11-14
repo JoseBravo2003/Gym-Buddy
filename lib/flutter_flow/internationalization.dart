@@ -379,6 +379,116 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // Rutina
+  {
+    '11zni7dz': {
+      'es': 'Workouts',
+      'en': '',
+    },
+    't3oqc8ws': {
+      'es': 'Choose your training for today',
+      'en': '',
+    },
+    'g0b6fr7x': {
+      'es': 'Full Body Workout',
+      'en': '',
+    },
+    '2l8fa8k6': {
+      'es': '12 Exercises | 45 minutes',
+      'en': '',
+    },
+    'zvawh4wn': {
+      'es': 'See more',
+      'en': '',
+    },
+    'adsbs5lf': {
+      'es': 'Full Body Workout',
+      'en': '',
+    },
+    'fyi32lt5': {
+      'es': '12 Exercises | 45 minutes',
+      'en': '',
+    },
+    'iznelkfi': {
+      'es': 'See more',
+      'en': '',
+    },
+    '7kdg6afh': {
+      'es': 'Full Body Workout',
+      'en': '',
+    },
+    '7m0d8ch0': {
+      'es': '12 Exercises | 45 minutes',
+      'en': '',
+    },
+    'nthywrzh': {
+      'es': 'See more',
+      'en': '',
+    },
+    '3uxahtl1': {
+      'es': 'Full Body Workout',
+      'en': '',
+    },
+    'yvk2h5y1': {
+      'es': '12 Exercises | 45 minutes',
+      'en': '',
+    },
+    '1exk7wge': {
+      'es': 'See more',
+      'en': '',
+    },
+  },
+  // Ejercicios
+  {
+    '1vcrxe2z': {
+      'es': 'Ejercicios',
+      'en': '',
+    },
+    'b0i1i7nu': {
+      'es': '3 Sets',
+      'en': '',
+    },
+    'ojrdxwgk': {
+      'es': 'Set 1',
+      'en': '',
+    },
+    '7m3ezzo6': {
+      'es': 'Calentamiento',
+      'en': '',
+    },
+    'w5rk1u58': {
+      'es': 'Correr',
+      'en': '',
+    },
+    'pye4p918': {
+      'es': 'Set 2',
+      'en': '',
+    },
+    'zkun2dqv': {
+      'es': 'Push-ups',
+      'en': '',
+    },
+    'fik1z14p': {
+      'es': 'Peso Muerto',
+      'en': '',
+    },
+    'tyrvhxgu': {
+      'es': 'Set 3',
+      'en': '',
+    },
+    'mqioox7f': {
+      'es': 'Squads',
+      'en': '',
+    },
+    'iulmcgde': {
+      'es': 'Press Militar',
+      'en': '',
+    },
+    '7plvuxlb': {
+      'es': 'Iniciar entrenamiento',
+      'en': '',
+    },
+  },
   // Miscellaneous
   {
     'osjbj17r': {
