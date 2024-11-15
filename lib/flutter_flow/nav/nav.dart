@@ -96,11 +96,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const InicioWidget(),
         ),
         FFRoute(
-          name: 'PaginaPrincipal',
-          path: '/paginaPrincipal',
-          builder: (context, params) => const PaginaPrincipalWidget(),
-        ),
-        FFRoute(
           name: 'Perfil',
           path: '/perfil',
           builder: (context, params) => const PerfilWidget(),
@@ -114,6 +109,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Ejercicios',
           path: '/ejercicios',
           builder: (context, params) => const EjerciciosWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaP',
+          path: '/paginaP',
+          builder: (context, params) => const PaginaPWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

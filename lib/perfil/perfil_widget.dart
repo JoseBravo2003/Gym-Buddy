@@ -416,8 +416,8 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                       ),
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('Login1');
                       },
                       text: FFLocalizations.of(context).getText(
                         'w2xq1pbm' /* Cerra sesión */,

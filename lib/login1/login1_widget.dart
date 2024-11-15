@@ -300,7 +300,7 @@ class _Login1WidgetState extends State<Login1Widget> {
                                       }
 
                                       context.pushNamedAuth(
-                                          'PaginaPrincipal', context.mounted);
+                                          'PaginaP', context.mounted);
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       '8qvr54cj' /* Ingresar */,

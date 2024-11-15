@@ -233,260 +233,252 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Start Now',
     },
   },
-  // PaginaPrincipal
-  {
-    'rhcxa68y': {
-      'es': 'Welcome back, Alex!',
-      'en': 'Welcome back, Alex!',
-    },
-    'al89suf9': {
-      'es': 'Let\'s crush your fitness goals today',
-      'en': 'Let\'s crush your fitness goals today',
-    },
-    'yzm19ylr': {
-      'es': 'Today\'s Progress',
-      'en': 'Today\'s Progress',
-    },
-    'v42tkt8d': {
-      'es': 'Steps',
-      'en': 'Steps',
-    },
-    'jfnrichw': {
-      'es': '7,543 / 10,000',
-      'en': '7,543 / 10,000',
-    },
-    'lk9t57vq': {
-      'es': 'Calories Burned',
-      'en': 'Calories Burned',
-    },
-    'mxgij85o': {
-      'es': '420 / 600',
-      'en': '420 / 600',
-    },
-    'qoeqbt2q': {
-      'es': 'Active Minutes',
-      'en': 'Active Minutes',
-    },
-    'es2hk9as': {
-      'es': '45 / 60',
-      'en': '45 / 60',
-    },
-    '7d8x0ohk': {
-      'es': 'Quick Actions',
-      'en': 'Quick Actions',
-    },
-    '77dkbj2k': {
-      'es': 'Start Workout',
-      'en': 'Start Workout',
-    },
-    'ge1tqyqy': {
-      'es': 'Log Meal',
-      'en': 'Log Meal',
-    },
-    'wy6s10sb': {
-      'es': 'Weight',
-      'en': 'Weight',
-    },
-    'z1yu9otn': {
-      'es': 'Insights',
-      'en': 'Insights',
-    },
-    'ddy6pr7g': {
-      'es': 'Upcoming Workouts',
-      'en': 'Upcoming Workouts',
-    },
-    'cac24yiq': {
-      'es': 'Strength Training',
-      'en': 'Strength Training',
-    },
-    'rflnhs18': {
-      'es': 'Today, 6:00 PM',
-      'en': 'Today, 6:00 PM',
-    },
-    '2f7j1ptl': {
-      'es': 'Yoga Session',
-      'en': 'Yoga Session',
-    },
-    '84tinh46': {
-      'es': 'Tomorrow, 7:30 AM',
-      'en': 'Tomorrow, 7:30 AM',
-    },
-    'l1tjwkbr': {
-      'es': 'View All Workouts',
-      'en': 'View All Workouts',
-    },
-  },
   // Perfil
   {
     'rktkr0qr': {
       'es': 'Perfil',
-      'en': '',
+      'en': 'Profile',
     },
     'd7ivydiz': {
       'es': 'Maria Arias',
-      'en': '',
+      'en': 'Maria Arias',
     },
     '4eokw301': {
       'es': 'Editar perfil',
-      'en': '',
+      'en': 'Edit profile',
     },
     '7d1d2cr1': {
       'es': 'Informacion Personal',
-      'en': '',
+      'en': 'Personal Information',
     },
     'vf53zgtj': {
       'es': 'Correo',
-      'en': '',
+      'en': 'Mail',
     },
     'xcunfq9n': {
       'es': 'maria.arias@email.com',
-      'en': '',
+      'en': 'maria.arias@email.com',
     },
     'z3ewl9nl': {
       'es': 'Peso',
-      'en': '',
+      'en': 'Weight',
     },
     'cuelss07': {
       'es': '75 kg',
-      'en': '',
+      'en': '75 kg',
     },
     '3ws9tmhv': {
       'es': 'Altura',
-      'en': '',
+      'en': 'Height',
     },
     '6yy1574i': {
       'es': '180 cm',
-      'en': '',
+      'en': '180 cm',
     },
     'zvnwqtkn': {
       'es': 'Genero',
-      'en': '',
+      'en': 'Gender',
     },
     'j6ozhlka': {
       'es': 'Mujer',
-      'en': '',
+      'en': 'Women',
     },
     'a1ntavh8': {
       'es': 'Edad',
-      'en': '',
+      'en': 'Age',
     },
     '1adv7c5z': {
       'es': '28',
-      'en': '',
+      'en': '28',
     },
     'w2xq1pbm': {
       'es': 'Cerra sesión',
-      'en': '',
+      'en': 'Log out',
     },
   },
   // Rutina
   {
     '11zni7dz': {
       'es': 'Workouts',
-      'en': '',
+      'en': 'Workouts',
     },
     't3oqc8ws': {
       'es': 'Choose your training for today',
-      'en': '',
+      'en': 'Choose your training for today',
+    },
+    '7w4h4f0o': {
+      'es': 'Cick para regresar',
+      'en': 'Click to return',
     },
     'g0b6fr7x': {
       'es': 'Full Body Workout',
-      'en': '',
+      'en': 'Full Body Workout',
     },
     '2l8fa8k6': {
       'es': '12 Exercises | 45 minutes',
-      'en': '',
+      'en': '12 Exercises | 45 minutes',
     },
     'zvawh4wn': {
       'es': 'See more',
-      'en': '',
+      'en': 'See more',
     },
     'adsbs5lf': {
       'es': 'Full Body Workout',
-      'en': '',
+      'en': 'Full Body Workout',
     },
     'fyi32lt5': {
       'es': '12 Exercises | 45 minutes',
-      'en': '',
+      'en': '12 Exercises | 45 minutes',
     },
     'iznelkfi': {
       'es': 'See more',
-      'en': '',
+      'en': 'See more',
     },
     '7kdg6afh': {
       'es': 'Full Body Workout',
-      'en': '',
+      'en': 'Full Body Workout',
     },
     '7m0d8ch0': {
       'es': '12 Exercises | 45 minutes',
-      'en': '',
+      'en': '12 Exercises | 45 minutes',
     },
     'nthywrzh': {
       'es': 'See more',
-      'en': '',
+      'en': 'See more',
     },
     '3uxahtl1': {
       'es': 'Full Body Workout',
-      'en': '',
+      'en': 'Full Body Workout',
     },
     'yvk2h5y1': {
       'es': '12 Exercises | 45 minutes',
-      'en': '',
+      'en': '12 Exercises | 45 minutes',
     },
     '1exk7wge': {
       'es': 'See more',
-      'en': '',
+      'en': 'See more',
     },
   },
   // Ejercicios
   {
     '1vcrxe2z': {
       'es': 'Ejercicios',
-      'en': '',
+      'en': 'Exercises',
     },
     'b0i1i7nu': {
       'es': '3 Sets',
-      'en': '',
+      'en': '3 Sets',
     },
     'ojrdxwgk': {
       'es': 'Set 1',
-      'en': '',
+      'en': 'Set 1',
     },
     '7m3ezzo6': {
       'es': 'Calentamiento',
-      'en': '',
+      'en': 'Heating',
     },
     'w5rk1u58': {
       'es': 'Correr',
-      'en': '',
+      'en': 'Run',
     },
     'pye4p918': {
       'es': 'Set 2',
-      'en': '',
+      'en': 'Set 2',
     },
     'zkun2dqv': {
       'es': 'Push-ups',
-      'en': '',
+      'en': 'Push-ups',
     },
     'fik1z14p': {
       'es': 'Peso Muerto',
-      'en': '',
+      'en': 'Dead weight',
     },
     'tyrvhxgu': {
       'es': 'Set 3',
-      'en': '',
+      'en': 'Set 3',
     },
     'mqioox7f': {
       'es': 'Squads',
-      'en': '',
+      'en': 'Squads',
     },
     'iulmcgde': {
       'es': 'Press Militar',
-      'en': '',
+      'en': 'Military Press',
     },
     '7plvuxlb': {
       'es': 'Iniciar entrenamiento',
-      'en': '',
+      'en': 'Start training',
+    },
+  },
+  // PaginaP
+  {
+    '74er4t54': {
+      'es': 'Welcome back,',
+      'en': 'Welcome back,',
+    },
+    'a1tbcn10': {
+      'es': 'Perfil',
+      'en': 'Profile',
+    },
+    '4nebl4yh': {
+      'es': 'Today\'s Workout',
+      'en': 'Today\'s Workout',
+    },
+    'sldhw4is': {
+      'es': 'Upper Body Strength',
+      'en': 'Upper Body Strength',
+    },
+    'nzwyiaq2': {
+      'es': '8 exercises • 40 min',
+      'en': '8 exercises • 40 min',
+    },
+    'whvrq5jv': {
+      'es': 'Start',
+      'en': 'Start',
+    },
+    's7pyzy5v': {
+      'es': 'Quick Actions',
+      'en': 'Quick Actions',
+    },
+    '9nf9eliq': {
+      'es': 'Ejercicios',
+      'en': 'Exercises',
+    },
+    '9t6vz5yn': {
+      'es': 'Rutinas',
+      'en': 'Routines',
+    },
+    '68n4mk8n': {
+      'es': 'Recent Workouts',
+      'en': 'Recent Workouts',
+    },
+    'kbzc14ux': {
+      'es': 'HIIT Cardio',
+      'en': 'HIIT Cardio',
+    },
+    'cdel4gxb': {
+      'es': 'Yesterday • 35 min',
+      'en': 'Yesterday • 35 min',
+    },
+    'ybqrx0i0': {
+      'es': 'Yoga Flow',
+      'en': 'Yoga Flow',
+    },
+    '442bwyak': {
+      'es': '2 days ago • 45 min',
+      'en': '2 days ago • 45 min',
+    },
+    '93guqc66': {
+      'es': 'Routines',
+      'en': 'Routines',
+    },
+    'g3hn27qp': {
+      'es': 'Exercises',
+      'en': 'Exercises',
+    },
+    '57km1i6r': {
+      'es': 'Profile',
+      'en': 'Profile',
     },
   },
   // Miscellaneous

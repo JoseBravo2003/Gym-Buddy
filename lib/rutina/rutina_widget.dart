@@ -46,51 +46,73 @@ class _RutinaWidgetState extends State<RutinaWidget> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 160.0,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF105DFB), Color(0xFF4B39EF)],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed('PaginaP');
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: 160.0,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF105DFB), Color(0xFF4B39EF)],
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
+                      ),
+                      borderRadius: BorderRadius.circular(24.0),
                     ),
-                    borderRadius: BorderRadius.circular(24.0),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            '11zni7dz' /* Workouts */,
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          24.0, 24.0, 24.0, 24.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              '11zni7dz' /* Workouts */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Inter Tight',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                fontFamily: 'Inter Tight',
-                                color: Colors.white,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            't3oqc8ws' /* Choose your training for today */,
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              't3oqc8ws' /* Choose your training for today */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Inter',
+                                      color: const Color(0xFFE8F5E9),
+                                      letterSpacing: 0.0,
+                                    ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyLarge.override(
-                                    fontFamily: 'Inter',
-                                    color: const Color(0xFFE8F5E9),
-                                    letterSpacing: 0.0,
-                                  ),
-                        ),
-                      ],
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              '7w4h4f0o' /* Cick para regresar */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Inter',
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
