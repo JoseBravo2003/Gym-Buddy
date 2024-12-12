@@ -10,3 +10,7 @@ export '/contacto/contacto_widget.dart' show ContactoWidget;
 export '/editar_perfil/editar_perfil_widget.dart' show EditarPerfilWidget;
 export '/history/history_widget.dart' show HistoryWidget;
 export '/startwoekout/startwoekout_widget.dart' show StartwoekoutWidget;
+export '/exercises/exercises_widget.dart' show ExercisesWidget;
+export '/test/test_widget.dart' show TestWidget;
+export '/test_copy/test_copy_widget.dart' show TestCopyWidget;
+export '/exercises_copy/exercises_copy_widget.dart' show ExercisesCopyWidget;

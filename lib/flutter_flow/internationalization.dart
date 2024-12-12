@@ -593,6 +593,70 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
+  // exercises
+  {
+    'puvoeruk': {
+      'es': 'Exercises',
+      'en': '',
+    },
+    '31ep3xl5': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // test
+  {
+    'mfvbnoa2': {
+      'es': 'Page Title',
+      'en': '',
+    },
+    'z7tqnamn': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // testCopy
+  {
+    '0ky1hrx5': {
+      'es': 'Entrenamiento Aleatorio',
+      'en': '',
+    },
+    'q4v7z9qh': {
+      'es': 'Hello World',
+      'en': '',
+    },
+    'uj7jan53': {
+      'es': 'Notas',
+      'en': '',
+    },
+    'l8h5ij5o': {
+      'es': 'Agregar Ejercicio',
+      'en': '',
+    },
+    'puzyhv26': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+    '5xrim2ol': {
+      'es': 'Page Title',
+      'en': '',
+    },
+    'fxc6x4ze': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // exercisesCopy
+  {
+    'tsims18t': {
+      'es': 'Exercises',
+      'en': '',
+    },
+    'susnxxo5': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
   // workouHistorEmpty
   {
     '6lpgq1yi': {
@@ -605,6 +669,51 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jsm6q498': {
       'es': 'Empezemos Ejercitarnos',
+      'en': '',
+    },
+  },
+  // startWorkoutComp
+  {
+    '4syjfvi8': {
+      'es': 'Entrenamiento Aleatorio',
+      'en': '',
+    },
+    'f7jagtuq': {
+      'es': 'Tiempo',
+      'en': '',
+    },
+    'cubv0j82': {
+      'es': 'Notas',
+      'en': '',
+    },
+    '7ts35hna': {
+      'es': 'Hello World',
+      'en': '',
+    },
+    'ht1re2yn': {
+      'es': 'Nuevo Set',
+      'en': '',
+    },
+    'hrrlrtgm': {
+      'es': 'Agregar Ejercicio',
+      'en': '',
+    },
+    'zf2owk2y': {
+      'es': 'Cancelar',
+      'en': '',
+    },
+  },
+  // inputWei
+  {
+    'r1axf34m': {
+      'es': 'TextField',
+      'en': '',
+    },
+  },
+  // inputReps
+  {
+    'qupmsin7': {
+      'es': 'TextField',
       'en': '',
     },
   },

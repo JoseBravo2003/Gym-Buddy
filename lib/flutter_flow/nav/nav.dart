@@ -144,6 +144,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'startwoekout')
               : const StartwoekoutWidget(),
+        ),
+        FFRoute(
+          name: 'exercises',
+          path: '/exercises',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'exercises')
+              : const ExercisesWidget(),
+        ),
+        FFRoute(
+          name: 'test',
+          path: '/test',
+          builder: (context, params) => const TestWidget(),
+        ),
+        FFRoute(
+          name: 'testCopy',
+          path: '/test',
+          builder: (context, params) => const TestCopyWidget(),
+        ),
+        FFRoute(
+          name: 'exercisesCopy',
+          path: '/exercisesCopy',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'exercisesCopy')
+              : const ExercisesCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

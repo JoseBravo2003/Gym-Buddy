@@ -1,3 +1,4 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -20,7 +21,13 @@ void main() async {
 
   await FlutterFlowTheme.initialize();
 
-  runApp(const MyApp());
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
+
+  runApp(ChangeNotifierProvider(
+    create: (context) => appState,
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -128,8 +135,10 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'PaginaP': const PaginaPWidget(),
       'History': const HistoryWidget(),
-      'Perfil': const PerfilWidget(),
       'startwoekout': const StartwoekoutWidget(),
+      'exercises': const ExercisesWidget(),
+      'Perfil': const PerfilWidget(),
+      'exercisesCopy': const ExercisesCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -165,6 +174,26 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             tooltip: '',
           ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.home_outlined,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              'ci2nwjji' /* Home */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.extension,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              '31ep3xl5' /* Home */,
+            ),
+            tooltip: '',
+          ),
           const BottomNavigationBarItem(
             icon: Icon(
               Icons.person_2,
@@ -174,11 +203,11 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: const Icon(
-              Icons.home_outlined,
+              Icons.extension,
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              'ci2nwjji' /* Home */,
+              'susnxxo5' /* Home */,
             ),
             tooltip: '',
           )
