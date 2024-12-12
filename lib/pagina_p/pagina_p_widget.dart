@@ -35,7 +35,10 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: const Color(0xFFE8F5E9),
@@ -71,6 +74,7 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                             end: const AlignmentDirectional(0, 1.0),
                           ),
                           borderRadius: BorderRadius.circular(24.0),
+                          shape: BoxShape.rectangle,
                         ),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
@@ -92,7 +96,9 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '74er4t54' /* Welcome back, */,
+                                          '74er4t54' /* Bienvenido de nuevo
+ */
+                                          ,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
@@ -173,13 +179,14 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '4nebl4yh' /* Today's Workout */,
+                                  '4nebl4yh' /* El entrenamiento de hoy */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: const Color(0xFF105DFB),
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
                                       fontSize: 22.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
@@ -240,7 +247,8 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: const Color(0xFF105DFB),
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -263,7 +271,9 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        's7pyzy5v' /* Quick Actions */,
+                        's7pyzy5v' /* Acciones rápidas
+ */
+                        ,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
@@ -296,7 +306,15 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    FlutterFlowTheme.of(context).tertiary,
+                                    FlutterFlowTheme.of(context).primaryText
+                                  ],
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(0.0, -1.0),
+                                  end: const AlignmentDirectional(0, 1.0),
+                                ),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
@@ -332,9 +350,10 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 16.0,
+                                                .tertiary,
+                                            fontSize: 20.0,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                     ),
                                   ].divide(const SizedBox(height: 12.0)),
@@ -349,7 +368,7 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed('Rutina');
+                            context.pushNamed('RutinaCopy');
                           },
                           child: Material(
                             color: Colors.transparent,
@@ -361,7 +380,15 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    FlutterFlowTheme.of(context).tertiary,
+                                    FlutterFlowTheme.of(context).primaryText
+                                  ],
+                                  stops: const [0.0, 1.0],
+                                  begin: const AlignmentDirectional(0.0, -1.0),
+                                  end: const AlignmentDirectional(0, 1.0),
+                                ),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
@@ -397,9 +424,10 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 16.0,
+                                                .tertiary,
+                                            fontSize: 20.0,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                     ),
                                   ].divide(const SizedBox(height: 12.0)),
@@ -412,7 +440,7 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        '68n4mk8n' /* Recent Workouts */,
+                        '68n4mk8n' /* Apartado de ayuda */,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
@@ -423,265 +451,114 @@ class _PaginaPWidgetState extends State<PaginaPWidget> {
                                 fontWeight: FontWeight.w600,
                               ),
                     ),
-                    Material(
-                      color: Colors.transparent,
-                      elevation: 2.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Container(
-                        width: MediaQuery.sizeOf(context).width * 1.0,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed('Contacto');
+                      },
+                      child: Material(
+                        color: Colors.transparent,
+                        elevation: 2.0,
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 16.0, 16.0, 16.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Container(
-                                        width: 60.0,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFE3F2FD),
-                                          borderRadius:
-                                              BorderRadius.circular(30.0),
-                                        ),
-                                        child: const Icon(
-                                          Icons.directions_run,
-                                          color: Color(0xFF105DFB),
-                                          size: 30.0,
-                                        ),
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'kbzc14ux' /* HIIT Cardio */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyLarge
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF15161E),
-                                                  fontSize: 16.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                        child: Container(
+                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 16.0, 16.0, 16.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 60.0,
+                                          height: 60.0,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFE3F2FD),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
                                           ),
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'cdel4gxb' /* Yesterday • 35 min */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF606A85),
-                                                  fontSize: 12.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
+                                          child: Icon(
+                                            Icons.directions_run,
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiary,
+                                            size: 30.0,
                                           ),
-                                        ],
-                                      ),
-                                    ].divide(const SizedBox(width: 16.0)),
-                                  ),
-                                  const Icon(
-                                    Icons.chevron_right,
-                                    color: Color(0xFF606A85),
-                                    size: 24.0,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Container(
-                                        width: 60.0,
-                                        height: 60.0,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFE3F2FD),
-                                          borderRadius:
-                                              BorderRadius.circular(30.0),
                                         ),
-                                        child: const Icon(
-                                          Icons.self_improvement,
-                                          color: Color(0xFF105DFB),
-                                          size: 30.0,
+                                        Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'kbzc14ux' /* Entrenadores */,
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyLarge
+                                                  .override(
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
+                                                    color: const Color(0xFF15161E),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'cdel4gxb' /* Ingresa para obtener ayuda  */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        color:
+                                                            const Color(0xFF606A85),
+                                                        fontSize: 12.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ybqrx0i0' /* Yoga Flow */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyLarge
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF15161E),
-                                                  fontSize: 16.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              '442bwyak' /* 2 days ago • 45 min */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: const Color(0xFF606A85),
-                                                  fontSize: 12.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ].divide(const SizedBox(width: 16.0)),
-                                  ),
-                                  const Icon(
-                                    Icons.chevron_right,
-                                    color: Color(0xFF606A85),
-                                    size: 24.0,
-                                  ),
-                                ],
-                              ),
-                            ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(const SizedBox(width: 16.0)),
+                                    ),
+                                    const Icon(
+                                      Icons.chevron_right,
+                                      color: Color(0xFF606A85),
+                                      size: 24.0,
+                                    ),
+                                  ],
+                                ),
+                              ].divide(const SizedBox(height: 12.0)),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ].divide(const SizedBox(height: 24.0)),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-              child: Material(
-                color: Colors.transparent,
-                elevation: 4.0,
-                child: Container(
-                  width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 80.0,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(12.0, 48.0, 12.0, 48.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Icon(
-                              Icons.format_list_bulleted,
-                              color: Color(0xFF105DFB),
-                              size: 24.0,
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '93guqc66' /* Routines */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF105DFB),
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                          ].divide(const SizedBox(height: 4.0)),
-                        ),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Icon(
-                              Icons.fitness_center,
-                              color: Color(0xFF606A85),
-                              size: 24.0,
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'g3hn27qp' /* Exercises */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF606A85),
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                          ].divide(const SizedBox(height: 4.0)),
-                        ),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Icon(
-                              Icons.person_outline,
-                              color: Color(0xFF606A85),
-                              size: 24.0,
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '57km1i6r' /* Profile */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF606A85),
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                          ].divide(const SizedBox(height: 4.0)),
-                        ),
-                      ],
-                    ),
-                  ),
                 ),
               ),
             ),

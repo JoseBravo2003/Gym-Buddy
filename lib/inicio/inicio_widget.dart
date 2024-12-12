@@ -35,7 +35,10 @@ class _InicioWidgetState extends State<InicioWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -78,7 +81,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              'iwwbpt9c' /* Ready to get fit? */,
+                              'iwwbpt9c' /* ¿Listo para ponerte en forma? */,
                             ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
@@ -105,32 +108,45 @@ class _InicioWidgetState extends State<InicioWidget> {
                                       fontWeight: FontWeight.normal,
                                     ),
                           ),
-                          FFButtonWidget(
-                            onPressed: () async {
-                              context.pushNamed('Login1');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '468ljrdr' /* Start Now */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 200.0,
-                              height: 56.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFF105DFB),
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                              elevation: 3.0,
-                              borderRadius: BorderRadius.circular(28.0),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 300.0, 0.0, 0.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'Login1',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: const TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '468ljrdr' /* Start Now */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 200.0,
+                                height: 56.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).tertiary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .headlineSmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                elevation: 3.0,
+                                borderRadius: BorderRadius.circular(28.0),
+                              ),
                             ),
                           ),
                         ].divide(const SizedBox(height: 24.0)),

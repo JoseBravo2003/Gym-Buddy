@@ -221,7 +221,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Inicio
   {
     'iwwbpt9c': {
-      'es': 'Ready to get fit?',
+      'es': '¿Listo para ponerte en forma?',
       'en': 'Ready to get fit?',
     },
     'xz4usort': {
@@ -238,6 +238,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rktkr0qr': {
       'es': 'Perfil',
       'en': 'Profile',
+    },
+    'h44sxtt1': {
+      'es': 'Click para regresar',
+      'en': 'Click to return',
     },
     'd7ivydiz': {
       'es': 'Maria Arias',
@@ -296,69 +300,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Log out',
     },
   },
-  // Rutina
-  {
-    '11zni7dz': {
-      'es': 'Workouts',
-      'en': 'Workouts',
-    },
-    't3oqc8ws': {
-      'es': 'Choose your training for today',
-      'en': 'Choose your training for today',
-    },
-    '7w4h4f0o': {
-      'es': 'Cick para regresar',
-      'en': 'Click to return',
-    },
-    'g0b6fr7x': {
-      'es': 'Full Body Workout',
-      'en': 'Full Body Workout',
-    },
-    '2l8fa8k6': {
-      'es': '12 Exercises | 45 minutes',
-      'en': '12 Exercises | 45 minutes',
-    },
-    'zvawh4wn': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-    'adsbs5lf': {
-      'es': 'Full Body Workout',
-      'en': 'Full Body Workout',
-    },
-    'fyi32lt5': {
-      'es': '12 Exercises | 45 minutes',
-      'en': '12 Exercises | 45 minutes',
-    },
-    'iznelkfi': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-    '7kdg6afh': {
-      'es': 'Full Body Workout',
-      'en': 'Full Body Workout',
-    },
-    '7m0d8ch0': {
-      'es': '12 Exercises | 45 minutes',
-      'en': '12 Exercises | 45 minutes',
-    },
-    'nthywrzh': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-    '3uxahtl1': {
-      'es': 'Full Body Workout',
-      'en': 'Full Body Workout',
-    },
-    'yvk2h5y1': {
-      'es': '12 Exercises | 45 minutes',
-      'en': '12 Exercises | 45 minutes',
-    },
-    '1exk7wge': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-  },
   // Ejercicios
   {
     '1vcrxe2z': {
@@ -366,8 +307,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Exercises',
     },
     'b0i1i7nu': {
-      'es': '3 Sets',
-      'en': '3 Sets',
+      'es': 'Clicl para regresar',
+      'en': 'Click to return',
     },
     'ojrdxwgk': {
       'es': 'Set 1',
@@ -413,16 +354,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // PaginaP
   {
     '74er4t54': {
-      'es': 'Welcome back,',
-      'en': 'Welcome back,',
+      'es': 'Bienvenido de nuevo\n',
+      'en': 'Welcome back',
     },
     'a1tbcn10': {
       'es': 'Perfil',
       'en': 'Profile',
     },
     '4nebl4yh': {
-      'es': 'Today\'s Workout',
-      'en': 'Today\'s Workout',
+      'es': 'El entrenamiento de hoy',
+      'en': 'Today\'s training',
     },
     'sldhw4is': {
       'es': 'Upper Body Strength',
@@ -437,7 +378,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Start',
     },
     's7pyzy5v': {
-      'es': 'Quick Actions',
+      'es': 'Acciones rápidas\n',
       'en': 'Quick Actions',
     },
     '9nf9eliq': {
@@ -449,36 +390,222 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Routines',
     },
     '68n4mk8n': {
-      'es': 'Recent Workouts',
-      'en': 'Recent Workouts',
+      'es': 'Apartado de ayuda',
+      'en': 'Help section',
     },
     'kbzc14ux': {
-      'es': 'HIIT Cardio',
-      'en': 'HIIT Cardio',
+      'es': 'Entrenadores',
+      'en': 'Coaches',
     },
     'cdel4gxb': {
-      'es': 'Yesterday • 35 min',
-      'en': 'Yesterday • 35 min',
+      'es': 'Ingresa para obtener ayuda ',
+      'en': 'Sign in for help',
     },
-    'ybqrx0i0': {
-      'es': 'Yoga Flow',
-      'en': 'Yoga Flow',
+  },
+  // RutinaCopy
+  {
+    '5q14ww2k': {
+      'es': 'Tus Rutinas',
+      'en': 'Your Routines',
     },
-    '442bwyak': {
-      'es': '2 days ago • 45 min',
-      'en': '2 days ago • 45 min',
+    'e1bs4r0v': {
+      'es': 'Crear rutina',
+      'en': 'Create routine',
     },
-    '93guqc66': {
-      'es': 'Routines',
-      'en': 'Routines',
+    'ybvy1p7u': {
+      'es': 'Filtrar',
+      'en': 'Filter',
     },
-    'g3hn27qp': {
-      'es': 'Exercises',
-      'en': 'Exercises',
+    'or6f55w8': {
+      'es': 'Entrenamiento Lunes',
+      'en': 'Monday Training',
     },
-    '57km1i6r': {
-      'es': 'Profile',
-      'en': 'Profile',
+    'ulwlqn1e': {
+      'es': '12 Exercises | 75 minutes',
+      'en': '12 Exercises | 75 minutes',
+    },
+    '3ngy06tu': {
+      'es': 'See more',
+      'en': 'See more',
+    },
+    '9t6gwcdx': {
+      'es': 'Entrenamiento Martes',
+      'en': 'Tuesday Training',
+    },
+    '6jqc8c8o': {
+      'es': '9 Ejercicios - 120 minutos',
+      'en': '9 Exercises - 120 minutes',
+    },
+    'no57o4z7': {
+      'es': 'See more',
+      'en': 'See more',
+    },
+    '1a9k4vj4': {
+      'es': 'Miercoles de Pierna',
+      'en': 'Wednesday Leg',
+    },
+    'xudco5eo': {
+      'es': '15 Ejercicios | 180 minutos',
+      'en': '15 Exercises | 180 minutes',
+    },
+    '3nz6q991': {
+      'es': 'See more',
+      'en': 'See more',
+    },
+  },
+  // Contacto
+  {
+    'wh7fcnvb': {
+      'es': 'Entrenadores personales',
+      'en': 'Personal Trainers',
+    },
+    '9rxlpi12': {
+      'es':
+          'Nuestros entrenadores certificados están aquí para ayudarle a alcanzar sus objetivos de acondicionamiento físico.',
+      'en':
+          'Our certified trainers are here to help you reach your fitness goals',
+    },
+    '2asd9xwf': {
+      'es': 'David Martinez',
+      'en': 'David Martinez',
+    },
+    '608p5tq1': {
+      'es': 'Fuerza y ​​acondicionamiento',
+      'en': 'Strength & Conditioning',
+    },
+    'dzkry6xz': {
+      'es': '+1 (555) 123-4567',
+      'en': '+1 (555) 123-4567',
+    },
+    '4zhl2jfi': {
+      'es':
+          'Se especializa en levantamiento de pesas y entrenamiento funcional con más de 8 años de experiencia ayudando a los clientes a alcanzar sus objetivos de fuerza.',
+      'en':
+          'Specializes in powerlifting and functional training with 8+ years of experience helping clients achieve their strength goals.',
+    },
+    'hehixl58': {
+      'es': 'Sarah Wilson',
+      'en': 'Sarah Wilson',
+    },
+    '625gwvrx': {
+      'es': 'Nutrición y pérdida de peso',
+      'en': 'Nutrition & Weight Loss',
+    },
+    '86r0qs4e': {
+      'es': '+1 (555) 987-6543',
+      'en': '+1 (555) 987-6543',
+    },
+    '0imyjz6z': {
+      'es':
+          'Nutricionista certificada y especialista en pérdida de peso con un enfoque holístico para la transformación de la salud y el fitness.',
+      'en':
+          'Certified nutritionist and weight loss specialist with a holistic approach to health and fitness transformation.',
+    },
+    '514ejt2t': {
+      'es': 'Michael Chang',
+      'en': 'Michael Chang',
+    },
+    'fkms08v4': {
+      'es': 'HIIT & Cardio',
+      'en': 'HIIT & Cardio',
+    },
+    '1taumwah': {
+      'es': '+1 (555) 456-7890',
+      'en': '+1 (555) 456-7890',
+    },
+    'bh0exur6': {
+      'es':
+          'Entrenador energético especializado en entrenamientos HIIT y programas cardiovasculares, que ayuda a los clientes a maximizar la quema de grasa y la resistencia.',
+      'en':
+          'High-energy trainer specializing in HIIT workouts and cardio programs, helping clients maximize fat burn and endurance.',
+    },
+  },
+  // EditarPerfil
+  {
+    's88i3lx3': {
+      'es': 'Cambiar Imagen',
+      'en': '',
+    },
+    'si1rjahp': {
+      'es': 'Nombre',
+      'en': '',
+    },
+    'm2f0hsly': {
+      'es': 'Apellidos',
+      'en': '',
+    },
+    'hp8q79h5': {
+      'es': 'Correo',
+      'en': '',
+    },
+    'w6e8bj8p': {
+      'es': 'Peso',
+      'en': '',
+    },
+    'jmcyg1h9': {
+      'es': 'Edad',
+      'en': '',
+    },
+    'jbk01z1o': {
+      'es': 'Guardar ',
+      'en': '',
+    },
+    '355kcute': {
+      'es': 'Editar Perfil',
+      'en': '',
+    },
+  },
+  // History
+  {
+    'jaliyks7': {
+      'es': 'History',
+      'en': '',
+    },
+    'l4ngot37': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // startwoekout
+  {
+    'eyzavaz5': {
+      'es': 'Inicio Rapido',
+      'en': '',
+    },
+    '5ugne24g': {
+      'es': 'Empezar un nuevo ejercicio',
+      'en': '',
+    },
+    'kjq2wi4b': {
+      'es': 'Rutina',
+      'en': '',
+    },
+    'flu4752j': {
+      'es': 'Ejemplos de Rutinas',
+      'en': '',
+    },
+    'neyl0j7g': {
+      'es': 'Inicio',
+      'en': '',
+    },
+    'ci2nwjji': {
+      'es': 'Home',
+      'en': 'Home',
+    },
+  },
+  // workouHistorEmpty
+  {
+    '6lpgq1yi': {
+      'es': 'No has realizado ejercicios',
+      'en': '',
+    },
+    'efo9dtca': {
+      'es': 'Completa ejerciciso y saldran aqui ',
+      'en': '',
+    },
+    'jsm6q498': {
+      'es': 'Empezemos Ejercitarnos',
+      'en': '',
     },
   },
   // Miscellaneous

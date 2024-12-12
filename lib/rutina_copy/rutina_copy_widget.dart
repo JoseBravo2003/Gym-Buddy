@@ -2,25 +2,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'rutina_model.dart';
-export 'rutina_model.dart';
+import 'rutina_copy_model.dart';
+export 'rutina_copy_model.dart';
 
-class RutinaWidget extends StatefulWidget {
-  const RutinaWidget({super.key});
+class RutinaCopyWidget extends StatefulWidget {
+  const RutinaCopyWidget({super.key});
 
   @override
-  State<RutinaWidget> createState() => _RutinaWidgetState();
+  State<RutinaCopyWidget> createState() => _RutinaCopyWidgetState();
 }
 
-class _RutinaWidgetState extends State<RutinaWidget> {
-  late RutinaModel _model;
+class _RutinaCopyWidgetState extends State<RutinaCopyWidget> {
+  late RutinaCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => RutinaModel());
+    _model = createModel(context, () => RutinaCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -35,7 +35,10 @@ class _RutinaWidgetState extends State<RutinaWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: const Color(0xFFE8F5E9),
@@ -58,11 +61,14 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: 160.0,
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF105DFB), Color(0xFF4B39EF)],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
+                      gradient: LinearGradient(
+                        colors: [
+                          FlutterFlowTheme.of(context).alternate,
+                          FlutterFlowTheme.of(context).tertiary
+                        ],
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, -1.0),
+                        end: const AlignmentDirectional(0, 1.0),
                       ),
                       borderRadius: BorderRadius.circular(24.0),
                     ),
@@ -71,46 +77,135 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                           24.0, 24.0, 24.0, 24.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              '11zni7dz' /* Workouts */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .headlineMedium
-                                .override(
-                                  fontFamily: 'Inter Tight',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
+                          Align(
+                            alignment: const AlignmentDirectional(1.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Material(
+                                  color: Colors.transparent,
+                                  elevation: 2.0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25.0),
+                                  ),
+                                  child: Container(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(25.0),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(25.0),
+                                      child: Image.network(
+                                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlede6cCiKZUrMbps6xR6lDnas-qxfsUTfFg&s',
+                                        width: 50.0,
+                                        height: 50.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
                                 ),
+                              ],
+                            ),
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              't3oqc8ws' /* Choose your training for today */,
+                              '5q14ww2k' /* Tus Rutinas */,
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
                                       fontFamily: 'Inter',
-                                      color: const Color(0xFFE8F5E9),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      fontSize: 24.0,
                                       letterSpacing: 0.0,
+                                      fontWeight: FontWeight.bold,
                                     ),
                           ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Material(
+                  color: Colors.transparent,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                  ),
+                ),
+                Material(
+                  color: Colors.transparent,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          20.0, 20.0, 20.0, 20.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              '7w4h4f0o' /* Cick para regresar */,
+                              'e1bs4r0v' /* Crear rutina */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                 ),
                           ),
+                          Icon(
+                            Icons.edit,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 24.0,
+                          ),
+                          FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              'ybvy1p7u' /* Filtrar */,
+                            ),
+                            options: FFButtonOptions(
+                              height: 40.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 16.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).tertiary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Inter Tight',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                              elevation: 0.0,
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -141,20 +236,21 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'g0b6fr7x' /* Full Body Workout */,
+                                  'or6f55w8' /* Entrenamiento Lunes */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Inter Tight',
-                                      color: const Color(0xFF105DFB),
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '2l8fa8k6' /* 12 Exercises | 45 minutes */,
+                                  'ulwlqn1e' /* 12 Exercises | 75 minutes */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -170,7 +266,7 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                                   print('Button pressed ...');
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  'zvawh4wn' /* See more */,
+                                  '3ngy06tu' /* See more */,
                                 ),
                                 options: FFButtonOptions(
                                   width: 120.0,
@@ -179,7 +275,7 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                                       0.0, 0.0, 0.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFF105DFB),
+                                  color: FlutterFlowTheme.of(context).tertiary,
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -196,7 +292,100 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(50.0),
                             child: Image.network(
-                              'https://images.unsplash.com/photo-1564356533237-46945af0eb1e?w=500&h=500',
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTizt27PhZNJU-3veCqLhALqgky-xhZLZ4DTw&s',
+                              width: 100.0,
+                              height: 100.0,
+                              fit: BoxFit.cover,
+                              alignment: const Alignment(0.0, 0.0),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Material(
+                  color: Colors.transparent,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          20.0, 20.0, 20.0, 20.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '9t6gwcdx' /* Entrenamiento Martes */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineSmall
+                                    .override(
+                                      fontFamily: 'Inter Tight',
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                              ),
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '6jqc8c8o' /* 9 Ejercicios - 120 minutos */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Inter',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              FFButtonWidget(
+                                onPressed: () {
+                                  print('Button pressed ...');
+                                },
+                                text: FFLocalizations.of(context).getText(
+                                  'no57o4z7' /* See more */,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 120.0,
+                                  height: 40.0,
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white,
+                                        letterSpacing: 0.0,
+                                      ),
+                                  elevation: 0.0,
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                              ),
+                            ].divide(const SizedBox(height: 8.0)),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(50.0),
+                            child: Image.network(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr4SAMMNmJzK6VVgC3CnujsIqjpYDtvJaa4g&s',
                               width: 100.0,
                               height: 100.0,
                               fit: BoxFit.cover,
@@ -232,20 +421,21 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'adsbs5lf' /* Full Body Workout */,
+                                  '1a9k4vj4' /* Miercoles de Pierna */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Inter Tight',
-                                      color: const Color(0xFF105DFB),
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'fyi32lt5' /* 12 Exercises | 45 minutes */,
+                                  'xudco5eo' /* 15 Ejercicios | 180 minutos */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -261,7 +451,7 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                                   print('Button pressed ...');
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  'iznelkfi' /* See more */,
+                                  '3nz6q991' /* See more */,
                                 ),
                                 options: FFButtonOptions(
                                   width: 120.0,
@@ -270,7 +460,7 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                                       0.0, 0.0, 0.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFF105DFB),
+                                  color: FlutterFlowTheme.of(context).tertiary,
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -287,192 +477,11 @@ class _RutinaWidgetState extends State<RutinaWidget> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(50.0),
                             child: Image.network(
-                              'https://images.unsplash.com/photo-1564356533237-46945af0eb1e?w=500&h=500',
+                              'https://play-lh.googleusercontent.com/TIZKI9og6LP_ZnbMzlAZC-MBZVmAB6ZQytHodXIjuqOCaIv4pgA-QvTpS5-yaGhMpN8=w600-h300-pc0xffffff-pd',
                               width: 100.0,
                               height: 100.0,
                               fit: BoxFit.cover,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Material(
-                  color: Colors.transparent,
-                  elevation: 2.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: Container(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          20.0, 20.0, 20.0, 20.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '7kdg6afh' /* Full Body Workout */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: 'Inter Tight',
-                                      color: const Color(0xFF105DFB),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '7m0d8ch0' /* 12 Exercises | 45 minutes */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Inter',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                              FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  'nthywrzh' /* See more */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 120.0,
-                                  height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFF105DFB),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        color: Colors.white,
-                                        letterSpacing: 0.0,
-                                      ),
-                                  elevation: 0.0,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 8.0)),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(50.0),
-                            child: Image.network(
-                              'https://images.unsplash.com/photo-1564356533237-46945af0eb1e?w=500&h=500',
-                              width: 100.0,
-                              height: 100.0,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Material(
-                  color: Colors.transparent,
-                  elevation: 2.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: Container(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          20.0, 20.0, 20.0, 20.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '3uxahtl1' /* Full Body Workout */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: 'Inter Tight',
-                                      color: const Color(0xFF105DFB),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'yvk2h5y1' /* 12 Exercises | 45 minutes */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Inter',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                              FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '1exk7wge' /* See more */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 120.0,
-                                  height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFF105DFB),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        color: Colors.white,
-                                        letterSpacing: 0.0,
-                                      ),
-                                  elevation: 0.0,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 8.0)),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(50.0),
-                            child: Image.network(
-                              'https://images.unsplash.com/photo-1564356533237-46945af0eb1e?w=500&h=500',
-                              width: 100.0,
-                              height: 100.0,
-                              fit: BoxFit.cover,
+                              alignment: const Alignment(0.0, 0.0),
                             ),
                           ),
                         ],

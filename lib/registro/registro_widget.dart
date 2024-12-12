@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -50,7 +49,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -507,19 +509,6 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                         return;
                                       }
 
-                                      await UsersRecord.collection
-                                          .doc(user.uid)
-                                          .update(createUsersRecordData(
-                                            contrasena: _model
-                                                .passwordTextController.text,
-                                            displayName: _model
-                                                .nombreTextController.text,
-                                            email: _model
-                                                .emailAddressTextController
-                                                .text,
-                                            uid: '',
-                                          ));
-
                                       context.pushNamedAuth(
                                           'Login1', context.mounted);
                                     },
@@ -535,7 +524,7 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          FlutterFlowTheme.of(context).tertiary,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -588,7 +577,7 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                                   fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .primary,
+                                                      .tertiary,
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,

@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -72,13 +74,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const Login1Widget() : const InicioWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const InicioWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const Login1Widget() : const InicioWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const InicioWidget(),
         ),
         FFRoute(
           name: 'Registro',
@@ -98,12 +100,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Perfil',
           path: '/perfil',
-          builder: (context, params) => const PerfilWidget(),
-        ),
-        FFRoute(
-          name: 'Rutina',
-          path: '/rutina',
-          builder: (context, params) => const RutinaWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'Perfil')
+              : const PerfilWidget(),
         ),
         FFRoute(
           name: 'Ejercicios',
@@ -113,7 +112,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'PaginaP',
           path: '/paginaP',
-          builder: (context, params) => const PaginaPWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PaginaP')
+              : const PaginaPWidget(),
+        ),
+        FFRoute(
+          name: 'RutinaCopy',
+          path: '/Rutinas',
+          builder: (context, params) => const RutinaCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Contacto',
+          path: '/contacto',
+          builder: (context, params) => const ContactoWidget(),
+        ),
+        FFRoute(
+          name: 'EditarPerfil',
+          path: '/editarPerfil',
+          builder: (context, params) => const EditarPerfilWidget(),
+        ),
+        FFRoute(
+          name: 'History',
+          path: '/history',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'History')
+              : const HistoryWidget(),
+        ),
+        FFRoute(
+          name: 'startwoekout',
+          path: '/startwoekout',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'startwoekout')
+              : const StartwoekoutWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -233,6 +263,7 @@ class FFParameters {
     ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -251,6 +282,7 @@ class FFParameters {
       type,
       isList,
       collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
     );
   }
 }
@@ -298,15 +330,11 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
-                    ),
+              ? Container(
+                  color: Colors.transparent,
+                  child: Image.asset(
+                    'assets/images/12.jpg',
+                    fit: BoxFit.cover,
                   ),
                 )
               : page;
