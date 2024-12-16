@@ -1,4 +1,4 @@
-import '/components/exercises_comp_widget.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -43,11 +43,11 @@ class _ExercisesWidgetState extends State<ExercisesWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).tertiary,
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'puvoeruk' /* Exercises */,
+              '45nkdzn9' /* Ejercicios */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter Tight',
@@ -62,10 +62,70 @@ class _ExercisesWidgetState extends State<ExercisesWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: wrapWithModel(
-            model: _model.exercisesCompModel,
-            updateCallback: () => safeSetState(() {}),
-            child: const ExercisesCompWidget(),
+          child: StreamBuilder<List<ExercisesRecord>>(
+            stream: queryExercisesRecord(),
+            builder: (context, snapshot) {
+              // Customize what your widget looks like when it's loading.
+              if (!snapshot.hasData) {
+                return Center(
+                  child: SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        FlutterFlowTheme.of(context).primary,
+                      ),
+                    ),
+                  ),
+                );
+              }
+              List<ExercisesRecord> listViewExercisesRecordList =
+                  snapshot.data!;
+
+              return ListView.builder(
+                padding: EdgeInsets.zero,
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                itemCount: listViewExercisesRecordList.length,
+                itemBuilder: (context, listViewIndex) {
+                  final listViewExercisesRecord =
+                      listViewExercisesRecordList[listViewIndex];
+                  return Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      title: Text(
+                        listViewExercisesRecord.name,
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Inter Tight',
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                      subtitle: Text(
+                        listViewExercisesRecord.bodyPart,
+                        style:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  fontFamily: 'Inter',
+                                  letterSpacing: 0.0,
+                                ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      tileColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      dense: false,
+                      contentPadding:
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
           ),
         ),
       ),

@@ -20,14 +20,17 @@ class TemplatesRecord extends FirestoreRecord {
   String get name => _name ?? '';
   bool hasName() => _name != null;
 
-  // "exerciseRef" field.
-  List<DocumentReference>? _exerciseRef;
-  List<DocumentReference> get exerciseRef => _exerciseRef ?? const [];
-  bool hasExerciseRef() => _exerciseRef != null;
+  // "exercises" field.
+  List<ExerciseStruct>? _exercises;
+  List<ExerciseStruct> get exercises => _exercises ?? const [];
+  bool hasExercises() => _exercises != null;
 
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
-    _exerciseRef = getDataList(snapshotData['exerciseRef']);
+    _exercises = getStructList(
+      snapshotData['exercises'],
+      ExerciseStruct.fromMap,
+    );
   }
 
   static CollectionReference get collection =>
@@ -83,12 +86,12 @@ class TemplatesRecordDocumentEquality implements Equality<TemplatesRecord> {
   bool equals(TemplatesRecord? e1, TemplatesRecord? e2) {
     const listEquality = ListEquality();
     return e1?.name == e2?.name &&
-        listEquality.equals(e1?.exerciseRef, e2?.exerciseRef);
+        listEquality.equals(e1?.exercises, e2?.exercises);
   }
 
   @override
   int hash(TemplatesRecord? e) =>
-      const ListEquality().hash([e?.name, e?.exerciseRef]);
+      const ListEquality().hash([e?.name, e?.exercises]);
 
   @override
   bool isValidKey(Object? o) => o is TemplatesRecord;

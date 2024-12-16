@@ -215,7 +215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ca6lkw58': {
       'es': 'Home',
-      'en': 'Home',
+      'en': 'History',
     },
   },
   // Inicio
@@ -243,14 +243,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Click para regresar',
       'en': 'Click to return',
     },
-    'd7ivydiz': {
-      'es': 'Maria Arias',
-      'en': 'Maria Arias',
-    },
-    '4eokw301': {
-      'es': 'Editar perfil',
-      'en': 'Edit profile',
-    },
     '7d1d2cr1': {
       'es': 'Informacion Personal',
       'en': 'Personal Information',
@@ -258,10 +250,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'vf53zgtj': {
       'es': 'Correo',
       'en': 'Mail',
-    },
-    'xcunfq9n': {
-      'es': 'maria.arias@email.com',
-      'en': 'maria.arias@email.com',
     },
     'z3ewl9nl': {
       'es': 'Peso',
@@ -300,57 +288,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Log out',
     },
   },
-  // Ejercicios
-  {
-    '1vcrxe2z': {
-      'es': 'Ejercicios',
-      'en': 'Exercises',
-    },
-    'b0i1i7nu': {
-      'es': 'Clicl para regresar',
-      'en': 'Click to return',
-    },
-    'ojrdxwgk': {
-      'es': 'Set 1',
-      'en': 'Set 1',
-    },
-    '7m3ezzo6': {
-      'es': 'Calentamiento',
-      'en': 'Heating',
-    },
-    'w5rk1u58': {
-      'es': 'Correr',
-      'en': 'Run',
-    },
-    'pye4p918': {
-      'es': 'Set 2',
-      'en': 'Set 2',
-    },
-    'zkun2dqv': {
-      'es': 'Push-ups',
-      'en': 'Push-ups',
-    },
-    'fik1z14p': {
-      'es': 'Peso Muerto',
-      'en': 'Dead weight',
-    },
-    'tyrvhxgu': {
-      'es': 'Set 3',
-      'en': 'Set 3',
-    },
-    'mqioox7f': {
-      'es': 'Squads',
-      'en': 'Squads',
-    },
-    'iulmcgde': {
-      'es': 'Press Militar',
-      'en': 'Military Press',
-    },
-    '7plvuxlb': {
-      'es': 'Iniciar entrenamiento',
-      'en': 'Start training',
-    },
-  },
   // PaginaP
   {
     '74er4t54': {
@@ -361,24 +298,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Perfil',
       'en': 'Profile',
     },
-    '4nebl4yh': {
-      'es': 'El entrenamiento de hoy',
-      'en': 'Today\'s training',
-    },
-    'sldhw4is': {
-      'es': 'Upper Body Strength',
-      'en': 'Upper Body Strength',
-    },
-    'nzwyiaq2': {
-      'es': '8 exercises • 40 min',
-      'en': '8 exercises • 40 min',
-    },
-    'whvrq5jv': {
-      'es': 'Start',
-      'en': 'Start',
-    },
     's7pyzy5v': {
-      'es': 'Acciones rápidas\n',
+      'es': 'Acciones rápidas',
       'en': 'Quick Actions',
     },
     '9nf9eliq': {
@@ -388,6 +309,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9t6vz5yn': {
       'es': 'Rutinas',
       'en': 'Routines',
+    },
+    'i2cp4miy': {
+      'es': 'Historial',
+      'en': 'History',
     },
     '68n4mk8n': {
       'es': 'Apartado de ayuda',
@@ -400,57 +325,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'cdel4gxb': {
       'es': 'Ingresa para obtener ayuda ',
       'en': 'Sign in for help',
-    },
-  },
-  // RutinaCopy
-  {
-    '5q14ww2k': {
-      'es': 'Tus Rutinas',
-      'en': 'Your Routines',
-    },
-    'e1bs4r0v': {
-      'es': 'Crear rutina',
-      'en': 'Create routine',
-    },
-    'ybvy1p7u': {
-      'es': 'Filtrar',
-      'en': 'Filter',
-    },
-    'or6f55w8': {
-      'es': 'Entrenamiento Lunes',
-      'en': 'Monday Training',
-    },
-    'ulwlqn1e': {
-      'es': '12 Exercises | 75 minutes',
-      'en': '12 Exercises | 75 minutes',
-    },
-    '3ngy06tu': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-    '9t6gwcdx': {
-      'es': 'Entrenamiento Martes',
-      'en': 'Tuesday Training',
-    },
-    '6jqc8c8o': {
-      'es': '9 Ejercicios - 120 minutos',
-      'en': '9 Exercises - 120 minutes',
-    },
-    'no57o4z7': {
-      'es': 'See more',
-      'en': 'See more',
-    },
-    '1a9k4vj4': {
-      'es': 'Miercoles de Pierna',
-      'en': 'Wednesday Leg',
-    },
-    'xudco5eo': {
-      'es': '15 Ejercicios | 180 minutos',
-      'en': '15 Exercises | 180 minutes',
-    },
-    '3nz6q991': {
-      'es': 'See more',
-      'en': 'See more',
     },
   },
   // Contacto
@@ -520,141 +394,79 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'High-energy trainer specializing in HIIT workouts and cardio programs, helping clients maximize fat burn and endurance.',
     },
   },
-  // EditarPerfil
-  {
-    's88i3lx3': {
-      'es': 'Cambiar Imagen',
-      'en': '',
-    },
-    'si1rjahp': {
-      'es': 'Nombre',
-      'en': '',
-    },
-    'm2f0hsly': {
-      'es': 'Apellidos',
-      'en': '',
-    },
-    'hp8q79h5': {
-      'es': 'Correo',
-      'en': '',
-    },
-    'w6e8bj8p': {
-      'es': 'Peso',
-      'en': '',
-    },
-    'jmcyg1h9': {
-      'es': 'Edad',
-      'en': '',
-    },
-    'jbk01z1o': {
-      'es': 'Guardar ',
-      'en': '',
-    },
-    '355kcute': {
-      'es': 'Editar Perfil',
-      'en': '',
-    },
-  },
   // History
   {
     'jaliyks7': {
-      'es': 'History',
-      'en': '',
+      'es': 'Historial',
+      'en': 'History',
     },
-    'l4ngot37': {
-      'es': 'Home',
-      'en': 'Home',
+    'dvsd4pys': {
+      'es': 'Historial',
+      'en': 'History',
     },
   },
   // startwoekout
   {
     'eyzavaz5': {
       'es': 'Inicio Rapido',
-      'en': '',
+      'en': 'Quick Start',
     },
     '5ugne24g': {
       'es': 'Empezar un nuevo ejercicio',
-      'en': '',
+      'en': 'Start a new exercise',
     },
     'kjq2wi4b': {
       'es': 'Rutina',
-      'en': '',
+      'en': 'Routine',
     },
     'flu4752j': {
-      'es': 'Ejemplos de Rutinas',
-      'en': '',
+      'es': 'Mis rutinas',
+      'en': 'My routines',
     },
     'neyl0j7g': {
-      'es': 'Inicio',
-      'en': '',
+      'es': 'Rutinas',
+      'en': 'Routines',
     },
-    'ci2nwjji': {
-      'es': 'Home',
-      'en': 'Home',
+    'pt5cgk9l': {
+      'es': 'Rutinas',
+      'en': 'History',
     },
   },
   // exercises
   {
-    'puvoeruk': {
-      'es': 'Exercises',
-      'en': '',
+    '45nkdzn9': {
+      'es': 'Ejercicios',
+      'en': 'Start',
     },
-    '31ep3xl5': {
-      'es': 'Home',
-      'en': 'Home',
+    'v381lu0g': {
+      'es': 'Ejercicios',
+      'en': 'History',
     },
   },
   // test
   {
-    'mfvbnoa2': {
-      'es': 'Page Title',
-      'en': '',
+    'y0xa9v30': {
+      'es': 'Empezar entrenamiento',
+      'en': 'Start',
     },
-    'z7tqnamn': {
+    'l4ngot37': {
       'es': 'Home',
-      'en': 'Home',
+      'en': 'History',
     },
   },
-  // testCopy
+  // homepage
   {
-    '0ky1hrx5': {
-      'es': 'Entrenamiento Aleatorio',
-      'en': '',
+    'u9tvcpzk': {
+      'es': 'Trabajo semanal ',
+      'en': 'Weekly work',
     },
-    'q4v7z9qh': {
-      'es': 'Hello World',
-      'en': '',
+    'guyw4vsl': {
+      'es': 'Graficos',
+      'en': 'Routines',
     },
-    'uj7jan53': {
-      'es': 'Notas',
-      'en': '',
-    },
-    'l8h5ij5o': {
-      'es': 'Agregar Ejercicio',
-      'en': '',
-    },
-    'puzyhv26': {
-      'es': 'Cancelar',
-      'en': '',
-    },
-    '5xrim2ol': {
-      'es': 'Page Title',
-      'en': '',
-    },
-    'fxc6x4ze': {
-      'es': 'Home',
-      'en': 'Home',
-    },
-  },
-  // exercisesCopy
-  {
-    'tsims18t': {
-      'es': 'Exercises',
-      'en': '',
-    },
-    'susnxxo5': {
-      'es': 'Home',
-      'en': 'Home',
+    'gsidqq4w': {
+      'es': 'Graficos',
+      'en': 'History',
     },
   },
   // workouHistorEmpty
@@ -674,33 +486,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // startWorkoutComp
   {
-    '4syjfvi8': {
-      'es': 'Entrenamiento Aleatorio',
-      'en': '',
-    },
-    'f7jagtuq': {
-      'es': 'Tiempo',
-      'en': '',
+    '3cfjm5zx': {
+      'es': 'Ingresa el nombre del entrenamiento',
+      'en': 'Enter workout name',
     },
     'cubv0j82': {
       'es': 'Notas',
-      'en': '',
-    },
-    '7ts35hna': {
-      'es': 'Hello World',
-      'en': '',
+      'en': 'Notes',
     },
     'ht1re2yn': {
-      'es': 'Nuevo Set',
-      'en': '',
+      'es': 'Agregar repetición',
+      'en': 'New Set',
     },
     'hrrlrtgm': {
       'es': 'Agregar Ejercicio',
-      'en': '',
+      'en': 'Add Exercise',
     },
     'zf2owk2y': {
+      'es': 'Guardar',
+      'en': 'Safe',
+    },
+    '2myw49jq': {
       'es': 'Cancelar',
-      'en': '',
+      'en': 'Cancel',
+    },
+  },
+  // exercisesComp
+  {
+    'g7d2wt1b': {
+      'es': 'Aceptar',
+      'en': 'Accept',
     },
   },
   // inputWei
@@ -719,6 +534,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Miscellaneous
   {
+    '65opaayv': {
+      'es': '',
+      'en': '',
+    },
+    '8ke10838': {
+      'es': '',
+      'en': '',
+    },
     'osjbj17r': {
       'es': '',
       'en': '',

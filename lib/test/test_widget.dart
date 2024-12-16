@@ -43,11 +43,11 @@ class _TestWidgetState extends State<TestWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).tertiary,
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'neyl0j7g' /* Page Title */,
+              'y0xa9v30' /* Empezar entrenamiento */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter Tight',

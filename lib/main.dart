@@ -10,6 +10,7 @@ import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'index.dart';
 
 void main() async {
@@ -120,7 +121,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'Login1';
+  String _currentPageName = 'PaginaP';
   late Widget? _currentPage;
 
   @override
@@ -137,8 +138,8 @@ class _NavBarPageState extends State<NavBarPage> {
       'History': const HistoryWidget(),
       'startwoekout': const StartwoekoutWidget(),
       'exercises': const ExercisesWidget(),
+      'homepage': const HomepageWidget(),
       'Perfil': const PerfilWidget(),
-      'exercisesCopy': const ExercisesCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -170,27 +171,37 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              'ca6lkw58' /* Home */,
+              'dvsd4pys' /* Historial */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: const FaIcon(
+              FontAwesomeIcons.walking,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              'pt5cgk9l' /* Rutinas */,
             ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
             icon: const Icon(
-              Icons.home_outlined,
+              Icons.route,
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              'ci2nwjji' /* Home */,
+              'v381lu0g' /* Ejercicios */,
             ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
             icon: const Icon(
-              Icons.extension,
+              Icons.graphic_eq,
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              '31ep3xl5' /* Home */,
+              'gsidqq4w' /* Graficos */,
             ),
             tooltip: '',
           ),
@@ -199,16 +210,6 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.person_2,
             ),
             label: '',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: const Icon(
-              Icons.extension,
-              size: 24.0,
-            ),
-            label: FFLocalizations.of(context).getText(
-              'susnxxo5' /* Home */,
-            ),
             tooltip: '',
           )
         ],

@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'rutina_copy_widget.dart' show RutinaCopyWidget;
+import 'homepage_widget.dart' show HomepageWidget;
 import 'package:flutter/material.dart';
 
-class RutinaCopyModel extends FlutterFlowModel<RutinaCopyWidget> {
+class HomepageModel extends FlutterFlowModel<HomepageWidget> {
   @override
   void initState(BuildContext context) {}
 

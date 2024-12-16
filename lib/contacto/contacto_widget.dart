@@ -169,7 +169,7 @@ class _ContactoWidgetState extends State<ContactoWidget> {
                                           .override(
                                             fontFamily: 'Inter',
                                             color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -271,7 +271,7 @@ class _ContactoWidgetState extends State<ContactoWidget> {
                                           .override(
                                             fontFamily: 'Inter',
                                             color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -373,7 +373,7 @@ class _ContactoWidgetState extends State<ContactoWidget> {
                                           .override(
                                             fontFamily: 'Inter',
                                             color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                             letterSpacing: 0.0,
                                           ),
                                     ),

@@ -45,11 +45,11 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).tertiary,
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'neyl0j7g' /* Inicio */,
+              'neyl0j7g' /* Rutinas */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Inter Tight',
@@ -136,7 +136,7 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
                                     16.0, 0.0, 16.0, 0.0),
                                 iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context).tertiary,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -189,10 +189,10 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
                           children: [
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 20.0, 0.0, 0.0),
+                                  0.0, 20.0, 0.0, 15.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'flu4752j' /* Ejemplos de Rutinas */,
+                                  'flu4752j' /* Mis rutinas */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleMedium
@@ -253,16 +253,52 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Text(
-                                              gridViewTemplatesRecord.name,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleSmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        letterSpacing: 0.0,
+                                            InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                safeSetState(() {});
+                                                await showModalBottomSheet(
+                                                  isScrollControlled: true,
+                                                  backgroundColor:
+                                                      Colors.transparent,
+                                                  enableDrag: false,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return GestureDetector(
+                                                      onTap: () {
+                                                        FocusScope.of(context)
+                                                            .unfocus();
+                                                        FocusManager.instance
+                                                            .primaryFocus
+                                                            ?.unfocus();
+                                                      },
+                                                      child: Padding(
+                                                        padding: MediaQuery
+                                                            .viewInsetsOf(
+                                                                context),
+                                                        child:
+                                                            const StartWorkoutCompWidget(),
                                                       ),
+                                                    );
+                                                  },
+                                                ).then((value) =>
+                                                    safeSetState(() {}));
+                                              },
+                                              child: Text(
+                                                gridViewTemplatesRecord.name,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Inter Tight',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -270,7 +306,7 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
                                           builder: (context) {
                                             final exercise =
                                                 gridViewTemplatesRecord
-                                                    .exerciseRef
+                                                    .exercises
                                                     .toList();
 
                                             return ListView.builder(
@@ -285,8 +321,8 @@ class _StartwoekoutWidgetState extends State<StartwoekoutWidget> {
                                                 return StreamBuilder<
                                                     ExercisesRecord>(
                                                   stream: ExercisesRecord
-                                                      .getDocument(
-                                                          exerciseItem),
+                                                      .getDocument(exerciseItem
+                                                          .exerciseRef!),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {

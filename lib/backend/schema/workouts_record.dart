@@ -20,31 +20,31 @@ class WorkoutsRecord extends FirestoreRecord {
   String get name => _name ?? '';
   bool hasName() => _name != null;
 
-  // "sets" field.
-  List<SetStruct>? _sets;
-  List<SetStruct> get sets => _sets ?? const [];
-  bool hasSets() => _sets != null;
-
-  // "exerciRef" field.
-  DocumentReference? _exerciRef;
-  DocumentReference? get exerciRef => _exerciRef;
-  bool hasExerciRef() => _exerciRef != null;
-
   // "timestamp" field.
   DateTime? _timestamp;
   DateTime? get timestamp => _timestamp;
   bool hasTimestamp() => _timestamp != null;
 
+  // "excercises" field.
+  List<ExerciseStruct>? _excercises;
+  List<ExerciseStruct> get excercises => _excercises ?? const [];
+  bool hasExcercises() => _excercises != null;
+
+  // "duration" field.
+  int? _duration;
+  int get duration => _duration ?? 0;
+  bool hasDuration() => _duration != null;
+
   DocumentReference get parentReference => reference.parent.parent!;
 
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
-    _sets = getStructList(
-      snapshotData['sets'],
-      SetStruct.fromMap,
-    );
-    _exerciRef = snapshotData['exerciRef'] as DocumentReference?;
     _timestamp = snapshotData['timestamp'] as DateTime?;
+    _excercises = getStructList(
+      snapshotData['excercises'],
+      ExerciseStruct.fromMap,
+    );
+    _duration = castToType<int>(snapshotData['duration']);
   }
 
   static Query<Map<String, dynamic>> collection([DocumentReference? parent]) =>
@@ -88,14 +88,14 @@ class WorkoutsRecord extends FirestoreRecord {
 
 Map<String, dynamic> createWorkoutsRecordData({
   String? name,
-  DocumentReference? exerciRef,
   DateTime? timestamp,
+  int? duration,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'name': name,
-      'exerciRef': exerciRef,
       'timestamp': timestamp,
+      'duration': duration,
     }.withoutNulls,
   );
 
@@ -109,14 +109,14 @@ class WorkoutsRecordDocumentEquality implements Equality<WorkoutsRecord> {
   bool equals(WorkoutsRecord? e1, WorkoutsRecord? e2) {
     const listEquality = ListEquality();
     return e1?.name == e2?.name &&
-        listEquality.equals(e1?.sets, e2?.sets) &&
-        e1?.exerciRef == e2?.exerciRef &&
-        e1?.timestamp == e2?.timestamp;
+        e1?.timestamp == e2?.timestamp &&
+        listEquality.equals(e1?.excercises, e2?.excercises) &&
+        e1?.duration == e2?.duration;
   }
 
   @override
-  int hash(WorkoutsRecord? e) =>
-      const ListEquality().hash([e?.name, e?.sets, e?.exerciRef, e?.timestamp]);
+  int hash(WorkoutsRecord? e) => const ListEquality()
+      .hash([e?.name, e?.timestamp, e?.excercises, e?.duration]);
 
   @override
   bool isValidKey(Object? o) => o is WorkoutsRecord;

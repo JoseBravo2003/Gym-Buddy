@@ -105,11 +105,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const PerfilWidget(),
         ),
         FFRoute(
-          name: 'Ejercicios',
-          path: '/ejercicios',
-          builder: (context, params) => const EjerciciosWidget(),
-        ),
-        FFRoute(
           name: 'PaginaP',
           path: '/paginaP',
           builder: (context, params) => params.isEmpty
@@ -117,19 +112,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const PaginaPWidget(),
         ),
         FFRoute(
-          name: 'RutinaCopy',
-          path: '/Rutinas',
-          builder: (context, params) => const RutinaCopyWidget(),
-        ),
-        FFRoute(
           name: 'Contacto',
           path: '/contacto',
           builder: (context, params) => const ContactoWidget(),
-        ),
-        FFRoute(
-          name: 'EditarPerfil',
-          path: '/editarPerfil',
-          builder: (context, params) => const EditarPerfilWidget(),
         ),
         FFRoute(
           name: 'History',
@@ -158,16 +143,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const TestWidget(),
         ),
         FFRoute(
-          name: 'testCopy',
-          path: '/test',
-          builder: (context, params) => const TestCopyWidget(),
-        ),
-        FFRoute(
-          name: 'exercisesCopy',
-          path: '/exercisesCopy',
+          name: 'homepage',
+          path: '/graficos',
           builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'exercisesCopy')
-              : const ExercisesCopyWidget(),
+              ? const NavBarPage(initialPage: 'homepage')
+              : const HomepageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

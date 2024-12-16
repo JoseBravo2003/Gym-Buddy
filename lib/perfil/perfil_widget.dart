@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -157,10 +158,14 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         borderRadius:
                                             BorderRadius.circular(50.0),
                                         child: Image.network(
-                                          'https://images.unsplash.com/photo-1684966609761-13027fd2a5c6?w=500&h=500',
+                                          valueOrDefault<String>(
+                                            currentUserPhoto,
+                                            'https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg',
+                                          ),
                                           width: 100.0,
                                           height: 100.0,
-                                          fit: BoxFit.cover,
+                                          fit: BoxFit.none,
+                                          alignment: const Alignment(0.0, 0.0),
                                         ),
                                       ),
                                     ),
@@ -171,9 +176,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'd7ivydiz' /* Maria Arias */,
-                                        ),
+                                        currentUserDisplayName,
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
                                             .override(
@@ -187,34 +190,6 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     ],
                                   ),
                                 ].divide(const SizedBox(width: 16.0)),
-                              ),
-                              FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '4eokw301' /* Editar perfil */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: MediaQuery.sizeOf(context).width * 1.0,
-                                  height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        color: Colors.white,
-                                        fontSize: 14.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                  elevation: 1.0,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
                               ),
                             ].divide(const SizedBox(height: 16.0)),
                           ),
@@ -279,9 +254,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               ),
                                         ),
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'xcunfq9n' /* maria.arias@email.com */,
-                                          ),
+                                          currentUserEmail,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
